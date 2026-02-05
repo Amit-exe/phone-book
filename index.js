@@ -19,6 +19,7 @@ const cusm = morgan(function (tokens, req, res) {
 const port = process.env.PORT || 3001
 
 app.use(express.json())
+app.use(express.static('dist'))
 app.use(cusm)
 app.use(cors())
 const generateId = ()=>{
