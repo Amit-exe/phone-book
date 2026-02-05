@@ -1,5 +1,4 @@
 const express = require("express")
-const cors = require("cors")
 let { default: person } = require("./person")
 const app = express()
 
@@ -21,7 +20,6 @@ const port = process.env.PORT || 3001
 app.use(express.json())
 app.use(express.static('dist'))
 app.use(cusm)
-app.use(cors())
 const generateId = ()=>{
     return String(Math.floor(Math.random()*1000))
 }
